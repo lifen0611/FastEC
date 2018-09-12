@@ -13,7 +13,7 @@ public class Configurator {
         return LATTE_CONFIGS;
     }
 
-    //静态内部类单利模式
+    //静态内部类单例模式
     private static  class  Holder {
         private static  final Configurator INSTANCE = new Configurator();
     }

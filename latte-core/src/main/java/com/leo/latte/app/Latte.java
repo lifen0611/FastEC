@@ -1,6 +1,8 @@
 package com.leo.latte.app;
 
+import android.app.Application;
 import android.content.Context;
+import android.graphics.Bitmap;
 
 import java.util.WeakHashMap;
 
@@ -14,8 +16,12 @@ public final class Latte {
         return Configurator.getInstance();
     }
 
-    private static WeakHashMap<String, Object> getConfigurations() {
+    public static WeakHashMap<String, Object> getConfigurations() {
         return Configurator.getInstance().getLatteConfigs();
+    }
+
+    public static Application getApplication() {
+        return (Application) Configurator.getInstance().getLatteConfigs().get(ConfigType.APPLICATION_CONTEXT.name());
     }
 
 }

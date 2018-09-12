@@ -10,7 +10,7 @@ public class ExampleApp extends Application {
         super.onCreate();
 
         Latte.init(this).
-                withApiHost("127.0.0.1")
+                withApiHost("http://news.baidu.com")
                 .configure();
 
     }
